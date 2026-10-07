@@ -1,0 +1,21 @@
+{
+  "id": "piloto-local-001",
+  "mode": "planning",
+  "synthetic": true,
+  "brief": {
+    "objective": "Planejar vídeo vertical de 20 segundos com referências fictícias e texto integrado ao espaço.",
+    "duration_seconds": 20,
+    "cta": "Agende uma visita",
+    "constraints": "Imóvel e mídia fictícios para teste. Sem preço, contato ou endereço disponíveis. Sem geração nem publicação."
+  },
+  "assets": [
+    {"id":"a-sala","type":"video","path":"fixture://sala.mov","inspection":"synthetic_fixture","description":"Descrição fictícia: sala, câmera lateral suave, 10 segundos, pontos fixos no piso."},
+    {"id":"a-varanda","type":"video","path":"fixture://varanda.mov","inspection":"synthetic_fixture","description":"Descrição fictícia: varanda, plano fixo de 8 segundos."},
+    {"id":"a-fachada","type":"image","path":"fixture://fachada.jpg","inspection":"synthetic_fixture","description":"Descrição fictícia: fachada, imagem vertical."}
+  ],
+  "facts": [
+    {"id":"f-area","value":"82 m² privativos","source":"Ficha fictícia fornecida para este teste"},
+    {"id":"f-quartos","value":"2 quartos","source":"Ficha fictícia fornecida para este teste"},
+    {"id":"f-varanda","value":"Varanda integrada","source":"Ficha fictícia fornecida para este teste"}
+  ]
+}
