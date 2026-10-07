@@ -5,5 +5,5 @@
   "description": "Portfólio de automação, IA aplicada e ferramentas para o mercado imobiliário",
   "type": "module",
   "engines": { "node": ">=22" },
-  "scripts": { "test": "node --test demo-agentes/tests/pipeline.test.mjs" }
+  "scripts": { "test": "node --test demo-agentes/tests/pipeline.test.mjs demo-kpis/tests/demo.test.mjs" }
 }

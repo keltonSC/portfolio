@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Demonstração de análise de campanhas e funil comercial com dados inteiramente fictícios.">
+  <title>KPIs · Kelton Pereira</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#results">Ir para os resultados</a>
+  <main class="wrap">
+    <header class="top">
+      <div><p class="eyebrow">Kelton Pereira · Dados &amp; Marketing</p><h1>Do investimento à conversão.</h1><p class="intro">Campanhas, produtos e funil em uma visão conectada.</p></div>
+      <span class="badge">Demonstração · dados fictícios</span>
+    </header>
+    <aside class="notice">Este painel usa exclusivamente números e nomes inventados. Não acessa CRM, Meta Ads, bancos ou contas externas.</aside>
+    <form id="filters" class="filters" aria-label="Filtros do painel">
+      <label>Período<select name="month"><option value="">Todos os meses</option></select></label>
+      <label>Produto<select name="venture"><option value="">Todos os produtos</option></select></label>
+      <label>Equipe<select name="team"><option value="">Todas as equipes</option></select></label>
+      <label>Canal<select name="channel"><option value="">Todos os canais</option></select></label>
+      <label class="search">Buscar campanha<input name="query" type="search" maxlength="200" placeholder="Digite um nome"></label>
+      <button type="reset" class="reset">Limpar filtros</button>
+    </form>
+    <nav aria-label="Visões do painel" class="tabs">
+      <button type="button" data-view="overview" aria-pressed="true">Visão geral</button>
+      <button type="button" data-view="campaigns" aria-pressed="false">Campanhas</button>
+      <button type="button" data-view="ventures" aria-pressed="false">Produtos</button>
+      <button type="button" data-view="quality" aria-pressed="false">Origem &amp; limites</button>
+    </nav>
+    <section id="results" tabindex="-1" aria-label="Resultados do painel">
+      <p id="summary" class="summary" role="status" aria-live="polite"></p>
+      <div id="cards" class="cards"></div>
+      <div id="content"></div>
+    </section>
+    <footer>Julho a setembro de 2026 · amostra sintética · <a href="../README.md">Sobre os projetos</a></footer>
+    <noscript>Ative o JavaScript para explorar esta demonstração local.</noscript>
+  </main>
+</body>
+</html>

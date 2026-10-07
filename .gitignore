@@ -12,3 +12,11 @@
 *.wav
 *.mp3
 *.zip
+*.xlsx
+*.csv
+*.parquet
+**/.venv/
+**/.pytest_cache/
+**/secrets.toml
+**/.streamlit/secrets.*
+!**/.streamlit/secrets.example.toml
