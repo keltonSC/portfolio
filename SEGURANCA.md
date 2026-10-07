@@ -13,7 +13,9 @@ Este portfólio apresenta práticas e decisões verificáveis. Um estudo de caso
 
 ## Estado desta revisão
 
-Foi realizada leitura estática dos demonstradores, aplicações e documentação selecionada. O demonstrador teve 25 testes aprovados na preparação inicial. A revisão de segurança não realizou pentest, login em serviços de clientes, rotação de credenciais ou alterações de produção.
+As cópias selecionadas foram revisadas e executadas com fixtures, incluindo cenários negativos de validação, isolamento de sessões, renderização de texto hostil, exportação e transporte HTTP. O coordenador teve 25 testes aprovados e a demo de KPIs teve 4. Os aplicativos Python possuem suítes próprias e dependências fixadas nas respectivas pastas.
+
+As demonstrações não precisam de acesso ao CRM ou banco. Antes de colocar código operacional em uso, configurar identidade e autorização no servidor, restringir escopo no banco, substituir credenciais comprometidas e testar o ambiente real. A revisão não realizou pentest ou rotação de credenciais. Remover um arquivo da versão atual não elimina cópias anteriores nem revoga seu conteúdo.
 
 Achados operacionais e caminhos sensíveis permanecem em relatório privado. A presença de recomendações nesta página não significa que as correções já foram implantadas. Demonstrações online com dados reais precisam de uma versão sanitizada antes de compartilhamento aberto.
 
