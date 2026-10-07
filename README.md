@@ -4,7 +4,7 @@ Marketing, design e desenvolvimento conectados por dados, integrações e automa
 
 Crio ferramentas para organizar informações, apoiar decisões e transformar processos em aplicações e experiências digitais. Este portfólio reúne dashboards de KPIs, integrações de sistemas, sites, automação documental e IA aplicada. Arquitetura modular, contratos de dados, testes e segurança da informação fazem parte das decisões técnicas apresentadas nos casos.
 
-[Apresentação no Notion](https://app.notion.com/p/3f2f4f87c8968000af3fd129fd1f7536) · [Perfil GitHub](https://github.com/keltonSC)
+[Apresentação no Notion](https://trusting-collard-cb3.notion.site/Portf-lio-Kelton-Pereira-3f2f4f87c8968000af3fd129fd1f7536) · [Perfil GitHub](https://github.com/keltonSC)
 
 ## Comece por estes projetos
 
