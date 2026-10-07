@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-kelton",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio de automação, IA aplicada e ferramentas para o mercado imobiliário",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test demo-agentes/tests/pipeline.test.mjs" }
+}
