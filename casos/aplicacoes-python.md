@@ -1,39 +1,49 @@
 # Aplicações Python
 
-Fichas preparadas em 07/10/2026 a partir de leitura estática do código público. Os aplicativos não foram executados nesta preparação. As descrições apresentam capacidades implementadas, sem atribuir resultados comerciais ou certificar integrações ativas.
+Versões selecionadas e revisadas em 07/10/2026, acompanhadas de exemplos fictícios e testes. Arquivos comerciais, marcas, credenciais e históricos operacionais ficam fora deste repositório. Cada pasta documenta instalação, execução e limites.
 
 ## Gerador de PDF
 
-**Problema:** preparar folhetos de imóveis com fotos e informações em um formato consistente.
+**Problema:** preparar folhetos com fotos e informações em formato consistente.
 
-**Implementação:** aplicação web com escolha de capa, envio de fotos em lote e marca d’água configurável em posição, tamanho, opacidade e margem. O código prevê PDF único, arquivos individuais e ZIP.
+**Implementação:** aplicação com capa, envio de fotos em lote e marca d’água configurável. Produz PDF único, folhetos individuais e ZIP. Valida JPEG/PNG por conteúdo e limita tamanho, pixels e quantidade; normaliza orientação, converte para sRGB e remove metadados de origem das imagens processadas.
 
 **Tecnologias:** Python, Streamlit, Pillow e ReportLab.
 
-**Evidência:** [repositório](https://github.com/keltonSC/Gerador-de-PDF) e [código consultado](https://github.com/keltonSC/Gerador-de-PDF/blob/049aeb37c8330bfa51574524f8bcd4b30e50841d/PDFapp.py).
+**Evidência:** [código selecionado, dependências fixadas e testes](../aplicacoes/gerador-pdf/README.md). Testes com imagens geradas verificam modos de exportação, rejeição de arquivos inválidos, metadados e interface.
 
-**Estado:** código disponível. Aparência e exportação dos folhetos não foram testadas nesta preparação. Uma demonstração deve utilizar imagens e marcas com permissão de uso.
+**Limite:** a marca de exemplo é genérica. Usar apenas imagens e marcas autorizadas; os testes não avaliam direitos de uso ou qualidade visual de material de terceiros.
 
 ## Casa Boris
 
 **Problema:** transformar planilhas de campanhas e leads em indicadores de acompanhamento.
 
-**Implementação:** painel com filtros por intervalo de datas, investimento total, quantidade de leads, custo por lead e evolução diária. O código também prevê importação, mapeamento e edição de tabelas e contagem por status de atendimento.
+**Implementação:** painel com período, investimento, leads, CPL e evolução diária. Importação, mapeamento e edição de tabelas usam dados em memória por sessão, com validação de schema, datas e números. Uploads de visitantes diferentes não compartilham nomes de arquivo em disco. O CPL acompanha alterações de investimento e leads.
 
 **Tecnologias:** Python, Streamlit, Pandas, Matplotlib e OpenPyXL.
 
-**Evidência:** [repositório](https://github.com/keltonSC/Casa-Boris) e [código consultado](https://github.com/keltonSC/Casa-Boris/blob/d9466fead703a7b69745f2a1e4ee0face0b1fb38/CasaBoris.py).
+**Evidência:** [código selecionado e testes de sessões](../aplicacoes/casa-boris/README.md). Fixtures substituem as planilhas comerciais.
 
-**Estado:** código disponível. Aplicação e esquema das planilhas não foram executados ou validados nesta preparação. Demonstrações devem usar dados fictícios.
+**Limite:** este exemplo não possui contas, persistência ou gestão de permissões de uma operação comercial. Os indicadores fictícios não representam resultados de campanhas reais.
 
 ## Painel de lançamentos
 
-**Problema:** consultar informações de empreendimentos a partir de uma planilha com campos em formatos diferentes.
+**Problema:** consultar registros com valores, datas e metragens em formatos diferentes.
 
-**Implementação:** aplicação que normaliza valores de VGV, datas e listas de metragens e oferece filtros por bairro, empreendimento, construtora, segmento e período. Exibe a contagem dos itens selecionados e detalhes em painéis expansíveis.
+**Implementação:** normalização, filtros e detalhes por registro. Versões públicas carregam exclusivamente dados fictícios e escapam texto externo na renderização. CORS e proteção XSRF ficam ativos; sugestões são validadas localmente, sem envio externo.
 
-**Tecnologias:** Python, Streamlit, Pandas e Requests.
+**Tecnologias:** Python, Streamlit e Pandas.
 
-**Evidência:** [repositório principal](https://github.com/keltonSC/Lancamentos-LCI) e [código consultado](https://github.com/keltonSC/Lancamentos-LCI/blob/32655e4cd1d846a2681b1d2e696021af06450ad1/projeto1.py). [Lancamentos-LC](https://github.com/keltonSC/Lancamentos-LC) é uma versão relacionada: o arquivo principal consultado era idêntico, sem afirmar igualdade de todo o histórico ou conteúdo dos repositórios.
+**Evidência:** [versão LCI](../aplicacoes/lancamentos-lci/README.md) e [versão LC](../aplicacoes/lancamentos-lc/README.md), com testes de normalização, HTML hostil, entradas e interface.
 
-**Estado:** código disponível. Planilhas comerciais, atualidade dos empreendimentos e aplicação não foram verificadas nesta preparação. O envio HTTP de comentários previsto no código não foi acionado; uma demonstração deve usar dados fictícios e desativar envios reais.
+**Limite:** nenhum empreendimento, endereço, condição ou disponibilidade do exemplo representa uma oferta comercial real.
+
+## Relatório de KPIs
+
+**Problema:** separar uma demonstração aberta do acesso aos indicadores operacionais de CRM.
+
+**Implementação:** inicia com agregados fictícios sem chamadas HTTP. A camada operacional exige ativação explícita, identidade verificada, sessão válida e allowlist no servidor antes de consultar dados. Credenciais trafegam apenas em cabeçalhos de requests HTTPS para destinos restritos, com timeout e erros sanitizados.
+
+**Evidência:** [código selecionado, instruções e testes](../aplicacoes/relatorio-kpis/README.md).
+
+**Limite:** autenticação e serviços de produção não estão configurados nesta demonstração. A allowlist autoriza o conjunto de dados inteiro; segregação por equipe exige implementação específica no servidor e no banco.

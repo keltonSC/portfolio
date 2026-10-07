@@ -38,6 +38,10 @@ Em 07/10/2026 foram examinados o código do painel, a ingestão e o esquema de d
 
 Não houve login, consulta de dados comerciais, execução de integrações ou avaliação funcional do painel nesta revisão. HTTP 200 comprova a resposta da hospedagem; não comprova disponibilidade dos dados ou funcionamento de todos os módulos. Código operacional, credenciais e bases não acompanham esta ficha.
 
-## Próximo passo
+## Demonstração pública
 
-Preparar uma demonstração com dados fictícios e validar o comportamento dos filtros e cálculos. Antes de ampliar o uso, revisar autorização por usuário e papel, exposição de dados pessoais, limites de consulta, agregação no servidor e rastreabilidade das atualizações.
+A [demonstração de KPIs](../demo-kpis/README.md) usa 12 registros inteiramente inventados. Permite explorar período, produto, equipe, canal e busca, além de investimento, leads, CPL e funil. Quatro testes verificam agregação, combinação de filtros, denominador zero e texto hostil literal.
+
+Não há chamadas de API, senhas, analytics ou conexão com bases operacionais. A interface usa módulos locais e criação de elementos DOM com `textContent`; a política de conteúdo bloqueia conexões externas. O host deve aplicar os cabeçalhos fornecidos para completar a proteção contra incorporação em frames.
+
+Antes de ampliar o uso operacional, validar autorização por usuário/equipe no servidor e banco, limites de consulta e rastreabilidade. Os testes desta demo não certificam a implantação original.
