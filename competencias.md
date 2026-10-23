@@ -16,6 +16,8 @@ Painéis de campanhas e leads, leitura de investimento e CPL, funil comercial, m
 
 Criação de sites e landing pages com HTML, CSS e JavaScript; aplicações Python com Streamlit ou FastAPI; templates e APIs separados da interface. Organização por responsabilidades: fontes de dados, ingestão, regras, persistência, API e apresentação.
 
+O [CRM com Next.js e Supabase](casos/crm-next-supabase.md) acrescenta TypeScript, React, App Router e Server Actions. No código observado, a sessão é verificada no servidor e as regras de leads, histórico e permissões ficam em migrations de PostgreSQL. Trata-se de um projeto em desenvolvimento, sem validação de operação em produção nesta revisão.
+
 Nos fluxos de IA assistida, contratos JSON, contexto versionado, dependências entre etapas e testes negativos ajudam a evitar entregas inconsistentes. No catálogo, origem, cobertura e validade do snapshot fazem parte do modelo de dados. Na ingestão de KPIs, hashes e upserts permitem reconhecer cargas repetidas.
 
 ## Segurança da informação e qualidade
@@ -33,6 +35,7 @@ A revisão de segurança identifica controles que precisam evoluir nos projetos 
 | Arquitetura e testes | [Coordenador de seis papéis](demo-agentes/README.md) | Código portátil e 25 testes aprovados |
 | Recuperação e governança | [Catálogo documental/MCP](casos/catalogo-rag-mcp.md) | Estudo de caso da implementação original |
 | Web e design | [Sites e landing pages](casos/sites-landing-pages.md) | Protótipos e prévia institucional local |
+| Aplicações web e banco | [CRM com Next.js e Supabase](casos/crm-next-supabase.md) | Código público, migrations, políticas e testes SQL presentes; execução não revalidada |
 | Documentos e conteúdo | [Aplicações Python](casos/aplicacoes-python.md) e [QA audiovisual](casos/producao-audiovisual-qa.md) | Código e método técnico documentado |
 
-Revisão editorial em 07/10/2026. Resultados comerciais, ganhos de tempo e eficácia de campanhas serão incluídos quando houver medição e autorização para divulgação.
+Revisão editorial em 23/10/2026. Resultados comerciais, ganhos de tempo e eficácia de campanhas serão incluídos quando houver medição e autorização para divulgação.

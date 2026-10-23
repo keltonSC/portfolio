@@ -8,6 +8,7 @@ Crio ferramentas para organizar informações, apoiar decisões e transformar pr
 
 ## Comece por estes projetos
 
+- **Aplicações web e banco:** [CRM com Next.js e Supabase](casos/crm-next-supabase.md), com leads, funil, agenda e permissões por papel. Código público em desenvolvimento.
 - **Dados e marketing:** [Dashboard online de KPIs](casos/dashboard-kpis.md), com ingestão, normalização e visualização de indicadores comerciais e de mídia.
 - **Arquitetura e IA aplicada:** [Coordenador de seis papéis](demo-agentes/README.md), demonstrador executável com contratos, dependências e 25 testes aprovados.
 - **Integrações:** [Catálogo documental e MCP](casos/catalogo-rag-mcp.md), com recuperação textual, proveniência e consultas de leitura.
@@ -19,6 +20,7 @@ Crio ferramentas para organizar informações, apoiar decisões e transformar pr
 
 | Projeto | Aplicação | Tecnologias | Acesso |
 |---|---|---|---|
+| CRM com Next.js e Supabase | Leads, funil, agenda, equipes e convites | TypeScript, Next.js, React, PostgreSQL/Supabase | [Caso e estado atual](casos/crm-next-supabase.md) · [Código](https://github.com/keltonSC/lc-crm) |
 | Dashboard online de KPIs | Indicadores comerciais, campanhas, CRM e estado das fontes | Python, Pandas, JavaScript, PostgreSQL/Supabase | [Caso e arquitetura](casos/dashboard-kpis.md) |
 | Coordenador de seis papéis | Briefings, contratos JSON, dependências e revisão de planos audiovisuais | Node.js, JavaScript, SHA-256, node:test | [Código e exemplo fictício](demo-agentes/README.md) |
 | Gerador de PDF | Folhetos com imagens validadas e sem metadados de origem | Python, Streamlit, Pillow, ReportLab | [Ficha](casos/aplicacoes-python.md#gerador-de-pdf) · [Código selecionado](aplicacoes/gerador-pdf/README.md) |
@@ -34,6 +36,8 @@ Crio ferramentas para organizar informações, apoiar decisões e transformar pr
 ## Competências em contexto
 
 **Integrações e dados:** APIs HTTP, MCP, SQL, preparação de dados, deduplicação e rastreabilidade.
+
+**Aplicações web:** TypeScript, React e Next.js, com Server Actions, sessão no servidor e regras de domínio em PostgreSQL/Supabase. O [caso do CRM](casos/crm-next-supabase.md) distingue o código disponível das funcionalidades ainda em revisão.
 
 **Marketing e design:** KPIs, campanhas e leads, materiais digitais, storytelling, CTAs, hierarquia visual e interfaces responsivas. Configuração avançada de Meta Ads integra a área de atuação declarada; implementações específicas de mensuração aguardam um case técnico sanitizado.
 
@@ -70,6 +74,7 @@ O coordenador trabalha em modo `planning`: recebe respostas JSON preparadas por 
 
 ## Verificação e estado
 
+- **CRM:** código público revisado em 23/10/2026. O repositório contém migrations, políticas de acesso, funções e testes SQL. A distribuição automática de leads está em uma PR aberta; implantação, execução dos testes e operação com usuários não foram validadas nesta revisão.
 - **Demonstrador:** 25 testes passaram na cópia portátil em 07/10/2026. Os testes cobrem contratos e transições; não medem qualidade criativa.
 - **Aplicações Python:** versões selecionadas executadas com dados fictícios e testes de interface, exportação, isolamento de sessões, validação e falhas HTTP. As instruções e limites estão em cada pasta. Dependências fixadas e verificadas; os resultados locais não comprovam atualização das instalações antigas.
 - **Catálogo/MCP e audiovisual:** estudos de caso da implementação original. Código operacional e mídia privada não acompanham estas fichas.
@@ -77,4 +82,4 @@ O coordenador trabalha em modo `planning`: recebe respostas JSON preparadas por 
 - **Inbox e sites:** protótipos e prévias locais, com limites descritos nas fichas. Não implicam integrações externas ou hospedagem ativa.
 - **Produtos Primos:** inclusão solicitada; funções, participação e tecnologias aguardam fonte antes do detalhamento.
 
-Os exemplos deste repositório são fictícios. A apresentação não contém bases de clientes, credenciais, históricos internos ou material de projetos confidenciais. Resultados comerciais e ganhos de tempo não foram medidos nesta preparação. Revisão editorial e técnica: 07/10/2026.
+Os exemplos deste repositório são fictícios. A apresentação não contém bases de clientes, credenciais, históricos internos ou material de projetos confidenciais. Resultados comerciais e ganhos de tempo não foram medidos nesta preparação. Revisão editorial: 23/10/2026; as datas das verificações técnicas estão indicadas em cada caso.
